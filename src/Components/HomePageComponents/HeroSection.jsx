@@ -1,0 +1,36 @@
+import React from 'react';
+import styles from './HeroSection.module.css';
+
+import image from '../../assets/Feroz.png.png';
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaPython, FaJava } from 'react-icons/fa';
+const HeroSection = () => {
+  return (
+    <section className={styles.heroSection} id='home'>
+      <div className={styles.content}>
+        <h1>Hello, I'm <span className={styles.highlight}>FEROZ ALI PANHWAR</span></h1>
+        <p>
+          I am a Full Stack Web Developer and React Native Developer, passionate about building responsive and dynamic web applications. Welcome to my portfolio!
+        </p>
+        <div className={styles.icons}>
+          <FaReact className={styles.reactIcon} />
+          <FaNodeJs className={styles.reactIcon} />
+          <FaHtml5 className={styles.reactIcon}/>
+          <FaCss3Alt className={styles.reactIcon}/>
+          <FaJsSquare className={styles.reactIcon}/>
+          <FaPhp className={styles.reactIcon}/>
+          <FaPython className={styles.reactIcon}/>
+          <FaJava className={styles.reactIcon}/>
+
+        </div>
+        <a href="#projects" className={styles.button}>
+          View My Work
+        </a>
+      </div>
+      <div className={styles.imageContainer}>
+        <img src={image} alt="FEROZ ALI PANHWAR" className={styles.image} />
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

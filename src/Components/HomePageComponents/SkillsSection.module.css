@@ -1,0 +1,101 @@
+.skillsSection {
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  
+}
+
+.skillsContainer {
+  height: 40vh;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  justify-content: center;
+}
+
+.skillCard {
+  min-width: 150px;
+  margin: 0 1rem;
+  height: auto;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  transition: transform 0.3s;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.skillCard:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.arrowBtn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.arrowBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .skillsContainer {
+    width: 90%;
+    margin-top: -50px;
+  }
+h3{
+  margin-top: 10px;
+  margin-bottom: 0px;
+
+}
+  .skillCard {
+    min-width: 120px;
+    padding: 0.8rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .arrowBtn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skillsContainer {
+    width: 95%;
+  }
+
+  .skillCard {
+    min-width: 100px;
+    padding: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+
+  .arrowBtn {
+    font-size: 1.2rem;
+  }
+}

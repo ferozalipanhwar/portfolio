@@ -1,0 +1,134 @@
+.aboutSection {
+  background-color: #f4f4f4;
+  padding: 4rem 2rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  margin-right: 2rem;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ transform: rotateY(180deg);
+}
+
+
+
+.content {
+  flex: 2;
+  min-width: 300px;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.text {
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.icons {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  margin: 0.5rem;
+}
+
+.iconContainer:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainer {
+    display: none; /* Hide the image on mobile */
+  }
+
+  .content {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  h3 {
+    margin-top: 0; /* Reset margin for smaller screens */
+    margin-left: 0; /* Center heading on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .iconContainer {
+    width: 120px;
+    padding: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+}

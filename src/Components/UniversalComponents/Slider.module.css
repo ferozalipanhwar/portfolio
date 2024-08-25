@@ -1,0 +1,89 @@
+/* Slider.module.css */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden; /* Prevents overflow */
+  box-sizing: border-box;
+}
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth slide animation */
+}
+
+.project {
+  flex: 0 0 calc(100% / 3); /* Show 3 items by default */
+  margin: 0 0.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.projectImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.arrowBtn {
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0.5rem; /* Position left arrow */
+}
+
+.next {
+  right: 0.5rem; /* Position right arrow */
+}
+
+.arrowBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    flex: 0 0 calc(100% / 2); /* Show 2 items on smaller screens */
+    margin: 0 0.5rem; /* Reduce margin for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project {
+    flex: 0 0 100%; /* Show 1 item on mobile screens */
+    margin: 0; /* Remove margin on mobile to prevent overflow */
+    padding: 1rem; /* Ensure padding does not cause overflow */
+  }
+
+  .container {
+    padding: 1rem; /* Reduce padding for mobile devices */
+  }
+
+  .arrowBtn {
+    font-size: 1.5rem; /* Reduce arrow size on mobile */
+  }
+}

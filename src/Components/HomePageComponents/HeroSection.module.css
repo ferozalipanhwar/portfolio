@@ -1,0 +1,128 @@
+/* General Styles */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  background-color: #f0f0f0;
+  min-height: 90vh;
+  overflow: hidden; /* Prevents overflow during animations */
+}
+
+.content {
+  flex: 1.5;
+  padding-right: 2rem;
+  animation: slideInFromLeft 1s ease-in-out; /* Slide in animation for content */
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #292828;
+}
+
+.highlight {
+  color: #00aaff;
+}
+
+.content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reactIcon, .nodeIcon {
+  font-size: 2.7rem;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px #989797;
+  border-radius: 50%;
+  color: #61dafb; /* React color */
+}
+
+.nodeIcon {
+  color: #68a063; /* Node.js color */
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #292828;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00aaff;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in-out; /* Fade in animation for image */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .content {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .icons {
+    justify-content: center;
+  }
+
+  .imageContainer {
+    margin-top: 1rem;
+  }
+}

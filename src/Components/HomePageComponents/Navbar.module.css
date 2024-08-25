@@ -1,0 +1,126 @@
+/* General Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 6rem;
+  background-color: #292828;
+  color: #ffffff;
+  z-index: 1000; /* Ensure it’s on top */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin-right: 12rem;
+  padding: 5px 15px;
+}
+
+.navLinks li {
+  margin-left: 1rem;
+}
+
+.navLinks a {
+
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+/* Mobile Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  margin-right: 3rem;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.link {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 44px; /* Adjust based on your navbar height */
+    right: 0;
+    background-color: #696969;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjust based on your navbar height */
+    align-items: center;
+    justify-content: center;
+    transform: translateX(130%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto; /* Allow scrolling if content is too long */
+  }
+
+  .navLinks.open {
+    transform: translateX(35%);
+  }
+
+  .navLinks li {
+    margin: 1.5rem 0; /* Margin between items */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger menu on mobile */
+  }
+}
