@@ -4,8 +4,8 @@ import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    from_name: '',
-    from_email: '',
+    name: '',
+    email: '',
     message: ''
   });
   const [isSent, setIsSent] = useState(false);
@@ -29,7 +29,7 @@ const ContactForm = () => {
         console.log('Email sent successfully:', result.text);
         setIsSent(true);
         setPopupMessage('Your message has been sent successfully!');
-        setFormData({ from_name: '', from_email: '', message: '' }); // Clear form
+        setFormData({ name: '', email: '', message: '' }); // Clear form
       }, (error) => {
         console.log('Error sending email:', error.text);
         setIsError(true);
@@ -43,50 +43,51 @@ const ContactForm = () => {
 
   return (
     <div className={styles.container} id='contact'>
-    <div className={styles.contactForm}>
-    <div className={styles.h3}> <h3>Contact Me</h3></div> 
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <label htmlFor="from_name">Name:</label>
-        <input
-          type="text"
-          id="from_name"
-          name="from_name"
-          value={formData.from_name}
-          onChange={handleChange}
-          required
-        />
+      <div className={styles.contactForm}>
+        <h3>Contact Me</h3>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="from_email">Email:</label>
-        <input
-          type="email"
-          id="from_email"
-          name="from_email"
-          value={formData.from_email}
-          onChange={handleChange}
-          required
-        />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
 
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
 
-        <button type="submit" disabled={isLoading}>Send</button>
-        {isLoading && <div className={styles.loader}></div>}
-      </form>
-      {showPopup && (
-        <div className={`${styles.popup} ${isSent ? styles.successPopup : styles.errorPopup}`}>
-          <p>{popupMessage}</p>
-          <button onClick={() => setShowPopup(false)}>Close</button>
-        </div>
-      )}
-    </div>
+          <button type="submit" disabled={isLoading}>Send</button>
+          {isLoading && <div className={styles.loader}></div>}
+        </form>
+        {showPopup && (
+          <div className={`${styles.popup} ${isSent ? styles.successPopup : styles.errorPopup}`}>
+            <p>{popupMessage}</p>
+            <button onClick={() => setShowPopup(false)}>Close</button>
+          </div>
+        )}
+      </div>
     </div>
   );
+  
 };
 
 export default ContactForm;

@@ -1,7 +1,6 @@
 .skillsSection {
   padding: 2rem;
   text-align: center;
-
 }
 
 .sliderContainer {
@@ -10,7 +9,6 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  
 }
 
 .skillsContainer {
@@ -45,7 +43,7 @@
 }
 
 .arrowBtn {
-  background: transparent;
+  background: gray;
   border: none;
   font-size: 2rem;
   cursor: pointer;
@@ -62,11 +60,10 @@
     width: 90%;
     margin-top: -50px;
   }
-h3{
-  margin-top: 10px;
-  margin-bottom: 0px;
-
-}
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
   .skillCard {
     min-width: 120px;
     padding: 0.8rem;

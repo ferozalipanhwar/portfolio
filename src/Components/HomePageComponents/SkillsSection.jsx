@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './SkillsSection.module.css';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaPython, FaJava } from 'react-icons/fa';
 import { SiMongodb, SiExpress } from 'react-icons/si';
@@ -21,7 +21,7 @@ const skills = [
 
 const SkillsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const skillsPerView = 4; // Number of skills visible at once
+  const [skillsPerView, setSkillsPerView] = useState(4);
 
   const handleNext = () => {
     if (currentIndex < skills.length - skillsPerView) {
@@ -35,9 +35,25 @@ const SkillsSection = () => {
     }
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 480) {
+        setSkillsPerView(1);
+      } else if (window.innerWidth <= 768) {
+        setSkillsPerView(2);
+      } else {
+        setSkillsPerView(4);
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className={styles.skillsSection} id="skills">
-     <div>  <h3>Skills</h3></div>
+      <div>  <h3>Skills</h3></div>
       <div className={styles.sliderContainer}>
         <button onClick={handlePrev} disabled={currentIndex === 0} className={styles.arrowBtn}>
           <IoIosArrowBack />
