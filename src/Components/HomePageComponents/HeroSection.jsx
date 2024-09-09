@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './HeroSection.module.css';
 import image from '../../assets/Feroz.png.png';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPhp, FaPython, FaJava } from 'react-icons/fa';
+import DownloadCV from '../UniversalComponents/DownloadCV';
 
 const HeroSection = () => {
   return (
@@ -21,9 +22,11 @@ const HeroSection = () => {
           <FaPython className={styles.reactIcon}/>
           <FaJava className={styles.reactIcon}/>
         </div>
-        <a href="#projects" className={styles.button}>
+      
+      <div className={styles.btns}> <a href="#projects" className={styles.button}>
           View My Work
         </a>
+        <DownloadCV/></div> 
       </div>
       <div className={styles.imageContainer}>
         <img src={image} alt="FEROZ ALI PANHWAR" className={styles.image} />

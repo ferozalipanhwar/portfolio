@@ -12,7 +12,12 @@ padding: 5rem 6rem;
   overflow: hidden; /* Prevents overflow during animations */
 }
 
-
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .content {
   flex: 1.5;
   padding-right: 2rem;
@@ -72,12 +77,14 @@ padding: 5rem 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(75, 74, 74);
+  border-radius: 20%;
   animation: fadeIn 1.5s ease-in-out; /* Fade in animation for image */
 }
 
 .image {
   max-width: 100%;
-  height: auto;
+  height: 90%;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -90,7 +97,7 @@ padding: 5rem 6rem;
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
@@ -101,18 +108,22 @@ padding: 5rem 6rem;
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(100px);
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
   }
   to {
     opacity: 1;
     transform: translateX(0);
+    background-color: rgb(75, 74, 74);
+   border-radius: 20%;
   }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .heroSection {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 2rem;
     margin-top: 50px; /* Adjust based on navbar height */
   }
