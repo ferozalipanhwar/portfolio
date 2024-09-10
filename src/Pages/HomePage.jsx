@@ -6,6 +6,7 @@ import FeaturedProjects from "../Components/HomePageComponents/FeaturedProjects"
 import Header from "../Components/HomePageComponents/Header";
 import HeroSection from "../Components/HomePageComponents/HeroSection";
 import SkillsSection from "../Components/HomePageComponents/SkillsSection";
+import BlogSection from "../Components/UniversalComponents/BlogSection";
 import Footer from "../Components/UniversalComponents/Footer";
 
 
@@ -20,6 +21,7 @@ function HomePage(){
   <SkillsSection/>
   <ExperinceSection/>
   <FeaturedProjects/>
+  <BlogSection/>
   <ContactForm/>
 
   </div>
