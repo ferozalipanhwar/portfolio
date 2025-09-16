@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.contactInfo}>
           <h3>Contact Me</h3>
-          <p>panhwerCode@gmail.com</p>
+          <p>panhwarcode@gmail.com</p>
           <p>Phone: 923256749757</p>
         </div>
         <div className={styles.socialLinks}>

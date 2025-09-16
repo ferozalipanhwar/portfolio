@@ -1,6 +1,5 @@
 import AboutSection from "../Components/HomePageComponents/AboutSection";
 import ContactForm from "../Components/HomePageComponents/ContactForm";
-import Experience from "../Components/HomePageComponents/Experience";
 import ExperinceSection from "../Components/HomePageComponents/ExperinceSection";
 import FeaturedProjects from "../Components/HomePageComponents/FeaturedProjects";
 import Header from "../Components/HomePageComponents/Header";
@@ -23,9 +22,10 @@ function HomePage(){
   <FeaturedProjects/>
   <BlogSection/>
   <ContactForm/>
-
+  <Footer/>
   </div>
-    <Footer/>
+   
   </>
+
 }
 export default HomePage;

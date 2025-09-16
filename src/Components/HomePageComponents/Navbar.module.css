@@ -14,7 +14,7 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: bold;
 }
 
@@ -96,7 +96,9 @@
   .navbar {
     padding: 1rem 2rem; /* Adjust padding for smaller screens */
   }
-
+  .logo {
+    font-size: 1.5rem; /* Slightly smaller logo */
+  }
   .navLinks {
     position: absolute;
     top: 44px; /* Adjust based on your navbar height */
