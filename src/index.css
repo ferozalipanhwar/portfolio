@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Ye optional hai, agar tailwind reset kaam na kare tabhi likhein: */
+body {
+  margin: 0;
+  padding: 0;
+}
