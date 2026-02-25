@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaCss3Alt, FaHtml5, FaJava, FaJsSquare, FaNodeJs, FaPhp, FaPython, FaReact } from 'react-icons/fa';
-import image from '../../assets/Feroz.png.png';
+import image from '../../assets/feroz.jpg';
 import DownloadCV from '../UniversalComponents/DownloadCV';
 
 const HeroSection = () => {

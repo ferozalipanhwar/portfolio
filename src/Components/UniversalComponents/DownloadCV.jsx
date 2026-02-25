@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
-import pdf from '../../assets/FEROZALI.pdf'; // Path verify karein
+import pdf from '../../assets/ferozalicv.pdf'; // Path verify karein
 
 const DownloadCV = () => {
   return (

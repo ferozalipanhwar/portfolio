@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { FaBars, FaBlog, FaCode, FaEnvelope, FaHome, FaProjectDiagram, FaTimes, FaUser } from 'react-icons/fa';
+import { FaBars, FaBlog, FaCode, FaEnvelope, FaHome, FaImage, FaProjectDiagram, FaTimes, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,15 +14,14 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    { name: 'Home', href: '#home', icon: <FaHome /> },
-    { name: 'About', href: '#about', icon: <FaUser /> },
-    { name: 'Projects', href: '#projects', icon: <FaProjectDiagram /> },
-    { name: 'Contact', href: '#contact', icon: <FaEnvelope /> },
-    { name: 'Blogs', href: '#blogs', icon: <FaBlog /> },
-    
-  ];
+const navLinks = [
+  { name: 'Home', href: '#home', icon: <FaHome /> },
+  { name: 'About', href: '#about', icon: <FaUser /> },
+  { name: 'Projects', href: '#projects', icon: <FaProjectDiagram /> },
+  { name: 'Contact', href: '#contact', icon: <FaEnvelope /> },
+  { name: 'Blogs', href: '#blogs', icon: <FaBlog /> },
+  { name: 'Gallery', href: '/portfolio/gallery', icon: <FaImage /> }  
+];
 
   return (
     <>
